@@ -5,7 +5,10 @@
   </div>
 
   <div class="center">
-  <%=@question.text%>
+  <%=@tweet.text%>
+  <div>
+    <%= image_tag @tweet.image, class: "index-image" if @tweet.image.attached? %>
+  </div>
   </div>
 
   <div class="right">
