@@ -9,7 +9,8 @@
       <% @questions.each do |question| %>
         <div class = "content">
           <%= link_to question_path(question) do %>
-            <div class = "text">
+            <div>
+              <%= image_tag question.image, class: "index-image" if question.image.attached? %>
               <p><%= question.text %></p>
             </div>
           <% end %>
