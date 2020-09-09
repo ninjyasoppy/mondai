@@ -21,6 +21,7 @@
 | button2 | string     | null: false,     |
 | button3 | string     | null: false,     |
 | button4 | string     | null: false,     |
+|category | integer    | null: false,     |
 ### Association
 
 - belongs_to :user

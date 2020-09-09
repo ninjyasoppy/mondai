@@ -1,0 +1,27 @@
+<div class = "main">
+
+  <div class="left">
+  left
+  </div>
+
+  <div class="center">
+
+
+  <div class="form-input">
+    <%= form_with model: @question, html: {class: "form"}, local: true do |f|%>
+      <%= f.text_field :text, class: "form-text", placeholder: 'type a message' %>
+      <%= f.text_area :text2, class: "form-text", placeholder: 'type a message' %> 
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: "hidden" %>
+      </label>
+      <%= f.submit '送信', class: 'form-submit' %>
+    <% end %>
+  </div>
+  </div>
+
+  <div class="right">
+  right
+  </div>
+
+</div>

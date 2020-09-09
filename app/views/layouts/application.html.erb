@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mondai</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +11,15 @@
   </head>
 
   <body>
+    <header>
+      <p> header </p>
+      <%= link_to new_question_path do %>
+        <p>作成する</p>
+      <% end %>
+    </header>
     <%= yield %>
+    <footer>
+      <p> 2020/09/08</p>
+    </footer>
   </body>
 </html>
