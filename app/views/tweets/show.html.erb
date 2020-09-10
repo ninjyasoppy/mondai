@@ -5,10 +5,17 @@
   </div>
 
   <div class="center">
-  <%=@tweet.text%>
-  <div>
-    <%= image_tag @tweet.image, class: "index-image" if @tweet.image.attached? %>
-  </div>
+    <div>
+      <%= image_tag @tweet.image, class: "show-image" if @tweet.image.attached? %>
+    </div>
+    <div class ="show_details">
+      <p class = "show_car_name">車検　　　<%=@tweet.car_name%></p>
+      <p class = "show_price">本体価格　<span class="price"><%=@tweet.price%></span>万円</p>
+      <p class = "show_sales_point">ポイント　<%=@tweet.sales_point%></p>
+      <p class = "show_model_year">年式　　　<%=@tweet.model_year%></p>
+      <p class = "show_mileage">走行距離　<%=@tweet.mileage%></p>
+      <p class = "show_inspection">車検　　　<%=@tweet.inspection%></p>
+    </div>
   </div>
 
   <div class="right">
@@ -16,3 +23,10 @@
   </div>
 
 </div>
+
+show_car_name
+show_price
+show_sales_point
+show_model_year
+show_mileage
+show_inspection

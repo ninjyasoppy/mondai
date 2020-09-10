@@ -22,6 +22,6 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:text, :image)
+    params.require(:tweet).permit(:car_name, :price, :sales_point, :model_year, :mileage, :inspection, :image)
   end
 end

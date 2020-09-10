@@ -11,15 +11,23 @@
   </head>
 
   <body>
-    <header>
-      <p> header </p>
-      <%= link_to new_tweet_path do %>
-        <p>作成する</p>
-      <% end %>
+    <header class="site-header">
+      <div class ="left-header">
+      header左
+      </div>
+      <nav class="gnav">
+        <ul class="gnav__menu">
+          <li class="gnav__menu__item"><a href="">トップページ</a></li>
+          <li class="gnav__menu__item"><a href="">レンタカー</a></li>
+          <li class="gnav__menu__item"><a href="">スタッフ紹介</a></li>
+          <li class="gnav__menu__item"><a href="">問合せ</a></li>
+          <li class="gnav__menu__item"><a href="">アネﾞデパミﾞ</a></li>
+        </ul>
+      </nav>
     </header>
     <%= yield %>
-    <footer>
-      <p> 2020/09/08</p>
+    <footer class="site-footer">
+        <p class="copyright">@2017 WEBDESIGNDAY</p>
     </footer>
   </body>
 </html>

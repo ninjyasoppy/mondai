@@ -40,8 +40,12 @@ ActiveRecord::Schema.define(version: 2020_09_09_061412) do
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "text"
-    t.text "text2"
+    t.string "car_name"
+    t.string "price"
+    t.string "sales_point"
+    t.string "model_year"
+    t.string "mileage"
+    t.string "inspection"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
