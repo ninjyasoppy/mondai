@@ -10,8 +10,11 @@
     </div>
      <%= image_tag "gazo2.jpg", class:"list-pict" %>
     <div>
-      <%= link_to new_tweet_path, class:"text-decoration-none" do %>
-        <p>作成する</p>
+
+      <%if user_signed_in? && current_user.admin %>
+        <%= link_to new_tweet_path, class:"text-decoration-none" do %>
+          <p>作成する</p>
+        <% end %>
       <% end %> 
       <div class = "contents">
         <% @tweets.each do |tweet| %>

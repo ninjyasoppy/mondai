@@ -18,12 +18,14 @@
     </div>
     <div><%= link_to "#" do %>→メールで問合せる←<% end %></div>
     <div>電話:090-1234-5678</div>
-    <div class="">
-    <%= link_to edit_tweet_path(@tweet.id),method: :get do %>編集<% end %>
-    </div>
-    <div class="">
-    <%= link_to tweet_path(@tweet.id),method: :delete do %>削除<% end %>
-    </div>
+    <%if user_signed_in? && current_user.admin %>
+      <div class="">
+        <%= link_to edit_tweet_path(@tweet.id),method: :get do %>編集<% end %>
+      </div>
+      <div class="">
+        <%= link_to tweet_path(@tweet.id),method: :delete do %>削除<% end %>
+      </div>
+    <% end %>
   </div>
 
 

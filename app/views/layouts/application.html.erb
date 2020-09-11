@@ -20,7 +20,11 @@
         <li class="gnav__menu__item"><%= link_to rental_tweets_path do %>レンタカー<% end %></li>
         <li class="gnav__menu__item"><%= link_to staff_tweets_path do %>スタッフ紹介<% end %></li>
         <li class="gnav__menu__item"><a href="">問合せ</a></li>
-        <li class="gnav__menu__item"><a href="">管理者ページ</a></li>
+        <% if user_signed_in? %>
+        <li class="gnav__menu__item"><%= link_to destroy_user_session_path, method: :delete do %>ログアウト<% end %></li>
+        <% else %>
+        <li class="gnav__menu__item"><%= link_to new_user_session_path do %>管理者専用<% end %></li>
+        <% end %>
       </ul>
     </header>
     <%= yield %>
