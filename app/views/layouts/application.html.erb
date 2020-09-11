@@ -15,19 +15,17 @@
       <div class ="left-header">
       header左
       </div>
-      <nav class="gnav">
-        <ul class="gnav__menu">
-          <li class="gnav__menu__item"><a href="">トップページ</a></li>
-          <li class="gnav__menu__item"><a href="">レンタカー</a></li>
-          <li class="gnav__menu__item"><a href="">スタッフ紹介</a></li>
-          <li class="gnav__menu__item"><a href="">問合せ</a></li>
-          <li class="gnav__menu__item"><a href="">アネﾞデパミﾞ</a></li>
-        </ul>
-      </nav>
+      <ul class="gnav__menu">
+        <li class="gnav__menu__item"><%= link_to root_path do %>トップページ<% end %></li>
+        <li class="gnav__menu__item"><%= link_to rental_tweets_path do %>レンタカー<% end %></li>
+        <li class="gnav__menu__item"><%= link_to staff_tweets_path do %>スタッフ紹介<% end %></li>
+        <li class="gnav__menu__item"><a href="">問合せ</a></li>
+        <li class="gnav__menu__item"><a href="">管理者ページ</a></li>
+      </ul>
     </header>
     <%= yield %>
     <footer class="site-footer">
-        <p class="copyright">@2017 WEBDESIGNDAY</p>
+        <p class="copyright">@2020 IMSOHAPPY</p>
     </footer>
   </body>
 </html>

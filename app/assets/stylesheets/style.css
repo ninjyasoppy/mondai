@@ -24,12 +24,15 @@ ul,li {
   position: fixed;/* スクロールしても位置が固定 */
   width: 100%;
   height: 40px;
+}
 
+.left-header{
+  min-width: 500px;
 }
 
 .gnav__menu{
   display: flex;
-  width: 850px;
+  min-width: 850px;
 }
 .gnav__menu__item{
   margin-right: 20px;
@@ -51,7 +54,7 @@ ul,li {
   text-align: center;
 }
 /* header footer */
-
+/* index */
 .list-pict {
   width: 500px;
   display: block;
@@ -108,14 +111,30 @@ ul,li {
   text-align : center
 }
 
+.content-detail{
+  width: 200px;
+  height: 300px;
+}
+
+.text-decoration-none{
+  text-decoration: none;
+}
+
 .index-image{
   width: 200px;
   height: 200px;
 
 }
-.price {
-  font-size: 20px;
+.price30{
+  font-size: 30px;
 }
+.index-car-name{
+  height: 50px;
+}
+.index-price{
+  height: 50px;
+}
+/* show */
 .show-image{
   height: 500px;
 
@@ -133,7 +152,9 @@ ul,li {
 .show_inspection{
   border-bottom: 1px solid black;
 }
-
+.price20 {
+  font-size: 20px;
+}
 
 .form-text{
   width: 500px;
