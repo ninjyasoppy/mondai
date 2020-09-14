@@ -20,22 +20,25 @@ ul,li {
 .site-header{
   background: #fff;
   display: flex;
-  padding: 20px;
   position: fixed;/* スクロールしても位置が固定 */
   width: 100%;
-  height: 40px;
+  height: 80px;
+  z-index: 3;
+  box-shadow: 0 0 30px rgba(0,0,0,.16);
 }
 
 .left-header{
   min-width: 500px;
 }
-
+.logo{
+  height: 80px;
+}
 .gnav__menu{
   display: flex;
   min-width: 850px;
 }
 .gnav__menu__item{
-  margin-right: 20px;
+  margin: auto 20px auto 0;
   list-style: none;
 }
 .gnav__menu__item a{
@@ -64,7 +67,7 @@ ul,li {
 
 .main{
   display: flex;
-  height: 1000px;
+  height: 1100px;
   margin-top: 80px;
 }
 .center{
@@ -93,7 +96,13 @@ ul,li {
   font-size: 20px;
   padding: 5px;
 }
-
+.car-list-title{
+  margin: 20px auto;
+  width: 200px;
+  text-align: center;
+  border-bottom:solid 1px #000;
+  font-size: 20px;
+}
 .contents{
   display: flex;
   flex-wrap: wrap;

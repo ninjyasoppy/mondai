@@ -1,0 +1,23 @@
+<div class = "main">
+
+  <div class="left">
+  left
+  </div>
+
+  <div class="center">
+  
+    <%= form_with model:@contact do |f|%>
+    <%= f.label :お名前 %><br>
+    <%= f.text_field :name %><br>
+    <%= f.label :お問い合わせ内容 %><br>
+    <%= f.text_field :message %><br>
+    <%= f.submit "送信" %><br>
+    <% end %>
+
+  </div>
+
+  <div class="right">
+  right
+  </div>
+
+</div>
