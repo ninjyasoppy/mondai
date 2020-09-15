@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :admin_user, only: [:create, :edit ,:update, :destroy]
+  before_action :admin_user, only: [:edit ,:update, :destroy]
   before_action :tweet_find, only: [:show, :edit ,:update, :destroy]
   def index
     @tweets = Tweet.all
