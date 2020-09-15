@@ -18,7 +18,7 @@ ul,li {
 
 /* header footer */
 .site-header{
-  background: #fff;
+  background: rgb(212, 211, 211);
   display: flex;
   position: fixed;/* スクロールしても位置が固定 */
   width: 100%;
@@ -72,7 +72,7 @@ ul,li {
 }
 .center{
   flex: 1;
-  background-color: ivory;
+  background-color: rgb(236, 240, 241);
   padding: 10px 10px 0 0;
   overflow: scroll;
   min-width: 660px;
@@ -80,12 +80,12 @@ ul,li {
 
 .left{
   min-width: 200px;
-  background-color: bisque;
+  background-color: white;
 }
 
 .right{
-  min-width: 150px;
-  background-color: darksalmon;
+  min-width: 200px;
+  background-color: white;
 }
 
 .hidden{
@@ -167,4 +167,43 @@ ul,li {
 
 .form-text{
   width: 500px;
+}
+/*問い合わせフォーム*/
+.contact-form{
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+.form-name{
+  
+
+}
+.form-message{
+
+}
+.contact-label{
+  width: 400px;
+
+}
+.contact-name{
+  width: 480px;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  font-size: 20px;
+
+}
+.contact-message{
+  width: 480px;
+  height: 300px;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  font-size: 20px;
+
+}
+
+.button{
+  background-color: skyblue;
+  font-size: 20px;
 }
