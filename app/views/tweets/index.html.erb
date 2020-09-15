@@ -1,42 +1,30 @@
-<div class = "main">
+<div class="center">
+  <div class ="logo-image">
 
-  <div class="left">
-  left
   </div>
-
-  <div class="center">
-    <div class ="logo-image">
-
-    </div>
-     <%= image_tag "gazo2.jpg", class:"list-pict" %>
-    <div>
-      <div class ="car-list-title">販売車両一覧</div>
-      <%# 販売車両 %>
-      <div class = "contents">
-        <% @tweets.each do |tweet| %>
-        <div class = "content">
-          <%= link_to tweet_path(tweet), class:"text-decoration-none" do %>
-            <div class= "content-detail">
-              <%= image_tag tweet.image, class: "index-image" if tweet.image.attached? %>
-              <div class="index-car-name"><%= tweet.car_name %></div>
-              <div class="index-price">価格<span class = "price30"><%= tweet.price %></span>万円</div>
-            </div>
-          <% end %>
-        </div>
+    <%= image_tag "gazo2.jpg", class:"list-pict" %>
+  <div>
+    <div class ="car-list-title">販売車両一覧</div>
+    <%# 販売車両 %>
+    <div class = "contents">
+      <% @tweets.each do |tweet| %>
+      <div class = "content">
+        <%= link_to tweet_path(tweet), class:"text-decoration-none" do %>
+          <div class= "content-detail">
+            <%= image_tag tweet.image, class: "index-image" if tweet.image.attached? %>
+            <div class="index-car-name"><%= tweet.car_name %></div>
+            <div class="index-price">価格<span class = "price30"><%= tweet.price %></span>万円</div>
+          </div>
         <% end %>
       </div>
-      <%# //販売車両 %>
-      <%if user_signed_in? && current_user.admin %>
-        <%= link_to new_tweet_path, class:"text-decoration-none" do %>
-          <button>車両追加</button>
-        <% end %>
-      <% end %> 
+      <% end %>
     </div>
-
-  </div>
-
-  <div class="right">
-  right
+    <%# //販売車両 %>
+    <%if user_signed_in? && current_user.admin %>
+      <%= link_to new_tweet_path, class:"text-decoration-none" do %>
+        <button>車両追加</button>
+      <% end %>
+    <% end %> 
   </div>
 
 </div>

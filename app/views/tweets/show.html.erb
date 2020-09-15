@@ -1,36 +1,23 @@
-<div class = "main">
-
-  <div class="left">
-  left
+<div class="center">
+  <div>
+    <%= image_tag @tweet.image, class: "show-image" if @tweet.image.attached? %>
   </div>
-
-  <div class="center">
-    <div>
-      <%= image_tag @tweet.image, class: "show-image" if @tweet.image.attached? %>
+  <div class ="show_details">
+    <p class = "show_car_name">車検　　　<%=@tweet.car_name%></p>
+    <p class = "show_price">本体価格　<span class="price20"><%=@tweet.price%></span>万円</p>
+    <p class = "show_sales_point">ポイント　<%=@tweet.sales_point%></p>
+    <p class = "show_model_year">年式　　　<%=@tweet.model_year%></p>
+    <p class = "show_mileage">走行距離　<%=@tweet.mileage%></p>
+    <p class = "show_inspection">車検　　　<%=@tweet.inspection%></p>
+  </div>
+  <div><%= link_to new_contact_path do %>→メールで問合せる←<% end %></div>
+  <div>電話:090-1234-5678</div>
+  <%if user_signed_in? && current_user.admin %>
+    <div class="">
+      <%= link_to edit_tweet_path(@tweet.id),method: :get do %>編集<% end %>
     </div>
-    <div class ="show_details">
-      <p class = "show_car_name">車検　　　<%=@tweet.car_name%></p>
-      <p class = "show_price">本体価格　<span class="price20"><%=@tweet.price%></span>万円</p>
-      <p class = "show_sales_point">ポイント　<%=@tweet.sales_point%></p>
-      <p class = "show_model_year">年式　　　<%=@tweet.model_year%></p>
-      <p class = "show_mileage">走行距離　<%=@tweet.mileage%></p>
-      <p class = "show_inspection">車検　　　<%=@tweet.inspection%></p>
+    <div class="">
+      <%= link_to tweet_path(@tweet.id),method: :delete do %>削除<% end %>
     </div>
-    <div><%= link_to "#" do %>→メールで問合せる←<% end %></div>
-    <div>電話:090-1234-5678</div>
-    <%if user_signed_in? && current_user.admin %>
-      <div class="">
-        <%= link_to edit_tweet_path(@tweet.id),method: :get do %>編集<% end %>
-      </div>
-      <div class="">
-        <%= link_to tweet_path(@tweet.id),method: :delete do %>削除<% end %>
-      </div>
-    <% end %>
-  </div>
-
-
-  <div class="right">
-  right
-  </div>
-
+  <% end %>
 </div>
