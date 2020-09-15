@@ -6,15 +6,16 @@ body {
   display: flex;
   flex-direction: column;
 }
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6{
   padding: 10px 0;
   margin: 0;
 }
 
-ul,li {
+ul,li,p {
   padding: 0;
   margin: 0;
 }
+
 
 /* header footer */
 .site-header{
@@ -57,6 +58,30 @@ ul,li {
   text-align: center;
 }
 /* header footer */
+/* left right side */
+.left{
+  min-width: 200px;
+  background-color: white;
+}
+
+.right{
+  min-width: 200px;
+  background-color: white;
+}
+
+.left-address{
+  margin: 10px 0 10px 10px;
+}
+
+.left-phone{
+  margin: 0 0 10px 10px;
+}
+
+.left-holiday{
+  margin: 0 0 0 10px;
+
+}
+/* left right side */
 /* index */
 .list-pict {
   width: 500px;
@@ -76,16 +101,6 @@ ul,li {
   padding: 10px 10px 0 0;
   overflow: scroll;
   min-width: 660px;
-}
-
-.left{
-  min-width: 200px;
-  background-color: white;
-}
-
-.right{
-  min-width: 200px;
-  background-color: white;
 }
 
 .hidden{
@@ -143,16 +158,18 @@ ul,li {
 .index-price{
   height: 50px;
 }
+/* index */
 /* show */
 .show-image{
   height: 500px;
-
 }
+
 .show_details{
   width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .show_car_name,
 .show_price,
 .show_sales_point,
@@ -177,33 +194,32 @@ ul,li {
 }
 
 .form-name{
-  
-
 }
+
 .form-message{
-
 }
+
 .contact-label{
   width: 400px;
-
 }
+
 .contact-input{
   width: 480px;
   margin: 0 0 10px 0;
   padding: 5px;
   font-size: 20px;
-
 }
+
 .contact-message{
   width: 480px;
   height: 300px;
   margin: 0 0 10px 0;
   padding: 5px;
   font-size: 20px;
-
 }
 
 .button{
   background-color: skyblue;
   font-size: 20px;
 }
+/*問い合わせフォーム*/

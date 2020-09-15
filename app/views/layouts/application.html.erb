@@ -27,17 +27,15 @@
         <% end %>
       </ul>
     </header>
+
     <div class = "main">
-      <div class="left">
-      left
-      </div>
+    <%= render "shared/left_side" %>
 
     <%= yield %>
-    
-      <div class="right">
-      right
-      </div>
+
+    <%= render "shared/right_side" %>
     </div>
+
     <footer class="site-footer">
         <p class="copyright">@2020 IMSOHAPPY</p>
     </footer>
