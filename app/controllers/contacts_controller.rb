@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       ContactMailer.contact_mail(@contact).deliver_now#メール送信はコントローラーのアクションから実行する
       redirect_to root_path
     else
-      redirect_to root_path
+      render :new
     end
   end
 

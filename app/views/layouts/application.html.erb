@@ -16,18 +16,20 @@
       <%= image_tag "gazo6.jpg", class:"logo" %>
       </div>
       <ul class="gnav__menu">
-        <li class="gnav__menu__item"><%= link_to root_path do %>トップページ<% end %></li>
-        <li class="gnav__menu__item"><%= link_to rental_tweets_path do %>レンタカー<% end %></li>
-        <li class="gnav__menu__item"><%= link_to staff_tweets_path do %>スタッフ紹介<% end %></li>
-        <li class="gnav__menu__item"><%= link_to new_contact_path do %>問合せ<% end %></li>
+        <li class="gnav__menu__item"><%= link_to root_path, class:"menu" do %>トップページ<% end %></li>
+        <li class="gnav__menu__item"><%= link_to rental_tweets_path, class:"menu" do %>レンタカー<% end %></li>
+        <li class="gnav__menu__item"><%= link_to staff_tweets_path, class:"menu" do %>スタッフ紹介<% end %></li>
+        <li class="gnav__menu__item"><%= link_to new_contact_path, class:"menu" do %>問合せ<% end %></li>
         <% if user_signed_in? %>
-        <li class="gnav__menu__item"><%= link_to destroy_user_session_path, method: :delete do %>ログアウト<% end %></li>
+        <li class="gnav__menu__item"><%= link_to destroy_user_session_path, method: :delete, class:"menu" do %>ログアウト<% end %></li>
         <% else %>
-        <li class="gnav__menu__item"><%= link_to new_user_session_path do %>管理者専用<% end %></li>
+        <li class="gnav__menu__item"><%= link_to new_user_session_path, class:"menu" do %>管理者専用<% end %></li>
         <% end %>
       </ul>
     </header>
+
     <%= yield %>
+    
     <footer class="site-footer">
         <p class="copyright">@2020 IMSOHAPPY</p>
     </footer>
