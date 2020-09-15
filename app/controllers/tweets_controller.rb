@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :admin_user, only: [:create, :edit ,:update, :destroy]
+  before_action :tweet_find, only: [:show, :edit ,:update, :destroy]
   def index
     @tweets = Tweet.all
   end
@@ -17,15 +19,12 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @tweet = Tweet.find(params[:id])
   end
 
   def edit
-    @tweet = Tweet.find(params[:id])
   end
 
   def update
-    @tweet = Tweet.find(params[:id])
     if @tweet.update(tweet_params)
       redirect_to action: :show
     else
@@ -34,7 +33,6 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    @tweet = Tweet.find(params[:id])
     if @tweet.destroy
       redirect_to root_path
     else
@@ -49,5 +47,15 @@ class TweetsController < ApplicationController
   private
   def tweet_params
     params.require(:tweet).permit(:car_name, :price, :sales_point, :model_year, :mileage, :inspection, :image)
+  end
+
+  def admin_user
+    unless user_signed_in? && current_user.admin
+      redirect_to root_path
+    end
+  end
+
+  def tweet_find
+    @tweet = Tweet.find(params[:id])
   end
 end
