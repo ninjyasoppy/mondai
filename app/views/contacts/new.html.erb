@@ -10,7 +10,15 @@
     <div class="contact-form">
       <div class="form-name">
         <div class= "contact-label">◆お名前</div>
-        <%= f.text_field :name , class:"contact-name"%>
+        <%= f.text_field :name , class:"contact-input"%>
+      </div>
+            <div class="form-name">
+        <div class= "contact-label">◆メール</div>
+        <%= f.text_field :email , class:"contact-input"%>
+      </div>
+            <div class="form-name">
+        <div class= "contact-label">◆電話番号</div>
+        <%= f.text_field :phone_number , class:"contact-input"%>
       </div>
       <div class="form-message">
         <div class="contact-label">◆お問い合わせ内容</div>
