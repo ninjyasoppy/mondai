@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2020_09_11_070400) do
     t.string "model_year"
     t.string "mileage"
     t.string "inspection"
-    t.boolean "admin", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

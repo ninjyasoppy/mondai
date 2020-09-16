@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     if @contact.valid?
       @contact.save
       ContactMailer.contact_mail(@contact).deliver_now#メール送信はコントローラーのアクションから実行する
-      redirect_to root_path
+      redirect_to  root_path
     else
       render :new
     end

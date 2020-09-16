@@ -9,5 +9,4 @@ class Tweet < ApplicationRecord
     validates :inspection
     validates :image
   end
-  validates :admin, inclusion:{in: [true], message: "許可されたユーザーではありません" }#user.adminがtrueの時だけ許可
 end

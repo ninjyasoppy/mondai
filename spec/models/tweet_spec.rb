@@ -2,10 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Tweet, type: :model do
   before do
-    user = FactoryBot.create(:user)
-    user.admin = true
     @tweet = FactoryBot.build(:tweet)
-    @tweet.admin = user.admin
     @tweet.image = fixture_file_upload('public/images/rapan.jpg')
   end
   it "全てのデータが存在していればデータは保存出来る" do
@@ -54,9 +51,4 @@ RSpec.describe Tweet, type: :model do
       expect(@tweet.errors.full_messages).to include("Image can't be blank") 
   end
 
-  it "投稿権限を付与されてないと登録できない" do
-    @tweet.admin = false
-      @tweet.valid?
-      expect(@tweet.errors.full_messages).to include("Admin 許可されたユーザーではありません") 
-  end
 end

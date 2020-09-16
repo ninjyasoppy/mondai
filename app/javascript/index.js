@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener('turbolinks:load', function () {
 
   const $menu = document.querySelectorAll(".menu");
   $menu.forEach(function (menu) {
