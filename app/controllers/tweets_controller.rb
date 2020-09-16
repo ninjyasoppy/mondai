@@ -46,7 +46,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:car_name, :price, :sales_point, :model_year, :mileage, :inspection, :image)
+    params.require(:tweet).permit(:car_name, :price, :sales_point, :model_year, :mileage, :inspection, :image).merge(admin: current_user.admin)
   end
 
   def admin_user

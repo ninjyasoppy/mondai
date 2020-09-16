@@ -18,6 +18,7 @@
 | mileage    | string     | null: false |
 | inspection | string     | null: false |
 | image      | string     | null: false |
+|user        | references | foreign_key: true|
 - 販売車両の投稿をする
 - has_one_attached :image
 
