@@ -266,7 +266,8 @@ ul,li,p {
 /* スタッフ */
 /* レンタル */
 .rental-image{
-  width: 400px;
+  width: 140px;
+  height: 110px;
 }
 table {
   width: 400px;
