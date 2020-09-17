@@ -60,12 +60,12 @@ ul,li,p {
 /* header footer */
 /* left right side */
 .left{
-  min-width: 200px;
+  width: 200px;
   background-color: white;
 }
 
 .right{
-  min-width: 200px;
+  width: 200px;
   background-color: white;
 }
 
@@ -81,10 +81,24 @@ ul,li,p {
   margin: 0 0 0 10px;
 
 }
+
+.right-image{
+  width: 180px;
+}
+
+.service-title{
+  text-align: center;
+  margin: 10px 30px;
+  border: 1px solid black;
+}
+.right-content{
+  margin: 10px;
+  background-color: rgb(190, 250, 230);
+}
 /* left right side */
 /* index */
 .list-pict {
-  width: 500px;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -98,7 +112,6 @@ ul,li,p {
 .center{
   flex: 1;
   background-color: rgb(236, 240, 241);
-  padding: 10px 10px 0 0;
   overflow: scroll;
   min-width: 660px;
 }
