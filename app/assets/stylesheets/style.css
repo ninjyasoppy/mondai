@@ -24,8 +24,7 @@ ul,li,p {
   position: fixed;/* スクロールしても位置が固定 */
   width: 100%;
   height: 80px;
-  z-index: 3;
-  box-shadow: 0 0 30px rgba(0,0,0,.16);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.500);
 }
 
 .left-header{
@@ -144,7 +143,7 @@ ul,li,p {
   height: 300px;
   margin-left: 10px;
   margin-bottom: 20px;
-  background-color: lawngreen;
+  background-color: rgb(175, 214, 250);
   text-align : center
 }
 
@@ -236,3 +235,27 @@ ul,li,p {
   font-size: 20px;
 }
 /*問い合わせフォーム*/
+/* スタッフ */
+.staff-content1{
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  border: 1px ridge black;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.500);
+}
+
+.staff-content2{
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  border: 1px solid black;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.500);
+}
+
+.staff-image{
+  height: 200px;
+
+}
+/* スタッフ */
