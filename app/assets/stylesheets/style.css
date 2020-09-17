@@ -69,15 +69,19 @@ ul,li,p {
 }
 
 .left-address{
+  width: 180px;
   margin: 10px 0 10px 10px;
 }
 
 .left-phone{
+  width: 180px;
   margin: 0 0 10px 10px;
 }
 
 .left-holiday{
+  width: 180px;
   margin: 0 0 0 10px;
+
 
 }
 
@@ -91,12 +95,13 @@ ul,li,p {
   border: 1px solid black;
 }
 .right-content{
+  width: 180px;
   margin: 10px;
   background-color: rgb(190, 250, 230);
 }
 /* left right side */
 /* index */
-.list-pict {
+.top-image {
   width: 100%;
   display: block;
   margin-left: auto;
@@ -259,3 +264,25 @@ ul,li,p {
 
 }
 /* スタッフ */
+/* レンタル */
+.rental-image{
+  width: 400px;
+}
+table {
+  width: 400px;
+  border: 1px solid black;
+}
+.table-lists{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 850px;
+  margin: 20px auto 0;
+  border: 1px solid black;
+}
+.table{
+  width: 400px;
+  margin: 10px;
+  border: 1px solid black;
+}
+/* レンタル */
