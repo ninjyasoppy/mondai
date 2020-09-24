@@ -1,5 +1,17 @@
-# テーブル設計
+アプリケーション名	a-line-maido
+アプリケーション概要	会社のHP。https://a-line-maido.herokuapp.com/
+EMAIL→ a-linemaido@nifty.com(管理者権限付与)
+PASS → aaaaaa
 
+利用方法         管理者は車両一覧の投稿、編集、削除ができます。
+目指した課題解決  親の会社のHPを作ることが目的です。
+実装した機能     userカラムにadmin(boolean型)を作ることでtrueのuserだけ実行できるアクションを作成しました。
+               車両一覧の投稿、編集、削除
+               問合せフォーム。name.message.email.phone_numberをcontactに保存した後contact_mailerで送信。
+               レンタカー用view、表の作成。
+               スタッフ用view
+実装予定の機能   複数写真の投稿。レスポンシブデザイン。
+# テーブル設計
 ## user テーブル
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
