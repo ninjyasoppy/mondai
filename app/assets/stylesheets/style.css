@@ -301,6 +301,30 @@ table{
   width: 200px;
 }
 
+/* スタッフ紹介 */
+.staff-wrap{
+  /* border: solid 1px black; */
+  margin: 10px 30px;
+}
+
+.staff{
+  display: flex;
+  border: solid 1px black;
+  margin: 20px 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.500);
+}
+
+.staff p{
+  margin: 0;
+}
+
+.staff-image{
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+
 /* ######################599px以下###################### */
 @media(max-width:599px){
 /* ナビゲーション */
@@ -392,6 +416,15 @@ table{
 /* レンタル */
 .rental-1,.rental-2,.rental-3{
   flex-direction: column;
+}
+
+/* スタッフ紹介 */
+.staff-wrap{
+  min-width: 300px;
+}
+
+.staff{
+  display: block;
 }
 
 }
