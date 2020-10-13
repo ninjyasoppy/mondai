@@ -354,6 +354,41 @@ table{
   opacity: 0.8;
 }
 
+/* 問い合わせ */
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 10px;
+  margin: 20px auto;
+  border: 5px solid #aaaaaa;
+}
+
+.contact-label{
+  width: 400px;
+}
+
+.contact-input{
+  width: 90%;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.contact-message{
+  width: 90%;
+  height: 300px;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.button{
+  background-color: #63bafb;
+  font-size: 20px;
+}
+
 /* ######################599px以下###################### */
 @media(max-width:599px){
 /* ナビゲーション */
@@ -381,6 +416,16 @@ table{
 }
 .rental-image{
   height: 80px;
+}
+
+/* 問い合わせ */
+.contact-form{
+  width: 90%;
+  padding: 10px;
+}
+
+.form-box{
+  width: 90%;
 }
 
 }
