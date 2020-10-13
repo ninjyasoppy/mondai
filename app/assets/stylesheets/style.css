@@ -252,8 +252,35 @@ background-color: #bfbd13;
 .box6-1, .box6-2, .box6-3{
   padding-bottom: 10px;
 }
+/* レンタル */
+.rental{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* 599px以下 */
+.rental-1,.rental-2,.rental-3{
+  display: flex;
+}
+
+
+.rental-image{
+  height: 100px;
+  width: 150px;
+}
+
+.table{
+  margin: 5px;
+  padding: 5px;
+}
+
+
+table{
+  width: 420px;
+}
+
+
+/* ######################599px以下###################### */
 @media(max-width:599px){
 /* ナビゲーション */
 
@@ -272,9 +299,19 @@ background-color: #bfbd13;
   padding: 5px 10px;
   font-size: 12px;
 }
+
+/*レンタル*/
+table{
+  font-size: 12px;
+  width: 350px;
+}
+.rental-image{
+  height: 80px;
 }
 
-/* 767px以下 */
+}
+
+/* ##########################767px以下################## */
 @media(max-width:767px){
 
 /* トグルボタン */
@@ -331,10 +368,14 @@ background-color: #bfbd13;
   background-color: #eeeeee;
 }
 
+/* レンタル */
+.rental-1,.rental-2,.rental-3{
+  flex-direction: column;
 }
 
+}
 
-/* 768px以上 */
+/* ########################768px以上################### */
 @media(min-width:768px){
 
 /* トグルボタン */
@@ -438,7 +479,7 @@ background-color: #bfbd13;
 }
 }
 
-/* 1190px以上 */
+/* ######################1190px以上################## */
 @media(min-width:1190px){
 /* 全体の幅を固定 */
 .box3, .box4, .boxA-inner, .box5-inner, .box6{
