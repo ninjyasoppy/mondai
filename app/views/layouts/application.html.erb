@@ -5,39 +5,48 @@
     <title>A-Line</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header class="site-header">
-      <div class ="left-header">
-      <%= image_tag "gazo6.jpg", class:"logo" %>
+  <div class="boxA">
+    <div class="boxA-inner">
+      <div class="box1">
+        <div class="site">
+          <h1><a href="#">A-LINE Co.,Ltd.</a></h1>
+        </div>
       </div>
-      <ul class="gnav__menu">
-        <li class="gnav__menu__item"><%= link_to root_path do %><div class="menu">トップページ</div><% end %></li>
-        <li class="gnav__menu__item"><%= link_to rental_tweets_path do %><div class="menu">レンタカー</div><% end %></li>
-        <li class="gnav__menu__item"><%= link_to staff_tweets_path do %><div class="menu">スタッフ</div><% end %></li>
-        <li class="gnav__menu__item"><%= link_to new_contact_path do %><div class="menu">問合せ</div><% end %></li>
-        <% if user_signed_in? %>
-        <li class="gnav__menu__item"><%= link_to destroy_user_session_path, method: :delete do %><div class="menu">ログアウト</div><% end %></li>
-        <% else %>
-        <li class="gnav__menu__item"><%= link_to new_user_session_path do %><div class="menu">管理者</div><% end %></li>
-        <% end %>
-      </ul>
-    </header>
-
-    <div class = "main">
-    <%= render "shared/left_side" %>
+      <div class="box2">
+        <button type="button" id="menubtn">
+          <i class="fas fa-bars"></i><span>MENU</span>
+        </button>
+        <nav class="menu" id="menu">
+          <ul>
+            <li><%= link_to tweets_path do %>ホーム<% end %></li>
+            <li><%= link_to sales_tweets_path do %>中古車販売<% end %></li>
+            <li><%= link_to rental_tweets_path do %>レンタカー<% end %></li>
+            <li><%= link_to staff_tweets_path do %>スタッフ<% end %></li>
+            <li><%= link_to about_tweets_path do %>店舗情報<% end %></li>
+            <li><%= link_to new_contact_path do %>問合せ<% end %></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 
     <%= yield %>
 
-    <%= render "shared/right_side" %>
+  <div class=" box5">
+    <div class="box5-inner">
+      <div class="copyright">
+        <p>Copyright &copy; 1989 A-Line CO.,LTD.</p>
+      </div>
     </div>
+  </div>
 
-    <footer class="site-footer">
-        <p class="copyright">@2020 IMSOHAPPY</p>
-    </footer>
   </body>
 </html>

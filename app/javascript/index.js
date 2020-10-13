@@ -1,23 +1,19 @@
 window.addEventListener('turbolinks:load', function () {
 
-  const $menu = document.querySelectorAll(".menu");
-  $menu.forEach(function (menu) {
-    menu.addEventListener('mouseover', function () {
-      menu.setAttribute("style", "color:#ffbf00;")
-    })
-    menu.addEventListener('mouseout', function () {
-      menu.removeAttribute("style", "color:#ffbf00;")
-    })
+  const $menu_btn = document.getElementById("menubtn");
+  const $menu = document.getElementById("menu");
+  console.log($menu_btn)
+  $menu_btn.addEventListener('click', function () {
+    const $menu_display = window.getComputedStyle($menu, null).getPropertyValue('display');
+    if ($menu_display === 'none') {
+      console.log("aaa")
+      $menu.setAttribute("style", "display:block;")
+    }
+    else {
+      $menu.setAttribute("style", "display:none;")
+    }
   })
 
-  const $content = document.querySelectorAll(".content-detail");
-  console.log($content)
-  $content.forEach(function (content) {
-    content.addEventListener('mouseover', function () {
-      content.setAttribute("style", "color:#ff0040;")
-    })
-    content.addEventListener('mouseout', function () {
-      content.removeAttribute("style", "color:#ff0040;")
-    })
-  })
+
+
 })

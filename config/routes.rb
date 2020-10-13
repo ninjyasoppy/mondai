@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     collection do
       get 'rental'
       get 'staff'
+      get 'sales'
+      get 'about'
     end
   end
 end
