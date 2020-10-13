@@ -325,6 +325,35 @@ table{
 }
 
 
+/* 店舗情報 */
+
+.about{
+  display: flex;
+  margin: 10px 30px;
+  border: solid 1px black;
+  }
+  
+.map-image{
+  width: 60%;
+  border: solid 1px black;
+}
+
+.about p{
+  margin-left: 5px;
+}
+
+.about a{
+  padding: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #CCFFFF;
+}
+
+.about a:hover{
+  opacity: 0.8;
+}
+
 /* ######################599px以下###################### */
 @media(max-width:599px){
 /* ナビゲーション */
@@ -425,6 +454,13 @@ table{
 
 .staff{
   display: block;
+}
+/* 店舗情報 */
+.about{
+  display: block;
+}
+.map-image{
+  width: 100%;
 }
 
 }
