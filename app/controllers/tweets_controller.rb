@@ -2,7 +2,6 @@ class TweetsController < ApplicationController
   before_action :admin_user, only: [:edit ,:update, :destroy]
   before_action :tweet_find, only: [:show, :edit ,:update, :destroy]
   def index
-    @tweets = Tweet.all
   end
   
   def new
@@ -40,8 +39,8 @@ class TweetsController < ApplicationController
     end
   end
 
-  def rental
-    
+  def sales
+    @tweets = Tweet.all
   end
 
   private

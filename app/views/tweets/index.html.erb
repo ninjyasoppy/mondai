@@ -77,4 +77,14 @@
       </div>
     </div>
   </div>
-  <a href="#"><i class="fas fa-cog"></i></a>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-key"></i><% end %>
+    <% else %>
+      <%= link_to new_user_session_path do %><i class="fas fa-key"></i><% end %>
+    <% end %>
+    <%if user_signed_in? && current_user.admin %>
+      <%= link_to new_tweet_path do %>
+        <%= link_to new_tweet_path do %><i class="fas fa-cog"></i><% end %>
+      <% end %>
+    <% end %> 
+ 

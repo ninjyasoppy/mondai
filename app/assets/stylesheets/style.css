@@ -263,7 +263,6 @@ background-color: #bfbd13;
   display: flex;
 }
 
-
 .rental-image{
   height: 100px;
   width: 150px;
@@ -274,11 +273,33 @@ background-color: #bfbd13;
   padding: 5px;
 }
 
-
 table{
   width: 420px;
 }
 
+/* 販売車両 */
+.cars{
+  display: flex;
+  flex-wrap: wrap;
+  /* border: solid 1px black; */
+  margin: 10px auto;
+  width: 70%;
+  justify-content: space-around;
+}
+.car{
+  width: 200px;
+  margin: 10px;
+  background-color: #CCFFFF;
+  border: solid 1px #cccccc;
+}
+
+.car:hover{
+  opacity: 0.8;
+}
+
+.car-image{
+  width: 200px;
+}
 
 /* ######################599px以下###################### */
 @media(max-width:599px){
