@@ -404,6 +404,32 @@ table{
 .show-details p{
   border-bottom: solid 1px black;
 }
+/* 車両投稿 */
+.car-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form{
+  width: 90%;
+  max-width: 500px;
+  margin: 10px 0;
+}
+
+.form-text{
+  max-width: 1000px;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.hidden{
+  display: none;
+}
+
+.car-form button{
+  
+}
 
 /* ######################599px以下###################### */
 @media(max-width:599px){

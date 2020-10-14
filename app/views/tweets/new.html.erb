@@ -1,25 +1,32 @@
-<div class="center">
+<div class="car-form">
 
-
-<div class="form-input">
   <%= form_with model: @tweet, html: {class: "form"}, local: true do |f|%>
-  　<div class="weight-bold-text">商品名</div>
+  　<div class="car-form-label">商品名</div>
     <%= f.text_field :car_name, class: "form-text", placeholder: 'セレナ　ハイウェイスターS-HV' %>
-    <div class="weight-bold-text">価格（万円）</div>
+
+    <div class="car-form-label">価格（万円）</div>
     <%= f.text_field :price, class: "form-text", placeholder: '179.5' %>
-    <div class="weight-bold-text">推し</div>
+
+    <div class="car-form-label">推し</div>
     <%= f.text_field :sales_point, class: "form-text", placeholder: 'ソーラー、FFヒーター、インバーター完備の乗用車！！' %>
-    <div class="weight-bold-text">年式</div>
+
+    <div class="car-form-label">年式</div>
     <%= f.text_field :model_year, class: "form-text", placeholder: '平成25年式' %>
-    <div class="weight-bold-text">走行距離</div>
+
+    <div class="car-form-label">走行距離</div>
     <%= f.text_field :mileage, class: "form-text", placeholder: '59,000Km' %>
-    <div class="weight-bold-text">車検</div>
+
+    <div class="car-form-label">車検</div>
     <%= f.text_field :inspection, class: "form-text", placeholder: '令和4年3月1日' %>
+
+    <div>
     <label class="form-image">
-      <span class="image-file">画像</span>
+      <div class="car-form-label"><button class="image-file">画像</button></div>
       <%= f.file_field :image, class: "hidden" %>
     </label>
+    </div>
+    
     <%= f.submit '送信', class: 'form-submit' %>
   <% end %>
-</div>
+
 </div>
