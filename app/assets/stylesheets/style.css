@@ -330,7 +330,7 @@ table{
 .about{
   display: flex;
   margin: 10px 30px;
-  border: solid 1px black;
+  background-color: #eeeeee;
   }
   
 .map-image{
