@@ -1,8 +1,8 @@
-<div class="center">
+<div class="show-car">
   <div>
     <%= image_tag @tweet.image, class: "show-image" if @tweet.image.attached? %>
   </div>
-  <div class ="show_details">
+  <div class ="show-details">
     <p class = "show_car_name">車検　　　<%=@tweet.car_name%></p>
     <p class = "show_price">本体価格　<span class="price20"><%=@tweet.price%></span>万円</p>
     <p class = "show_sales_point">ポイント　<%=@tweet.sales_point%></p>

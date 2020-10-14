@@ -389,6 +389,22 @@ table{
   font-size: 20px;
 }
 
+/* 販売車両一覧 */
+.show-car{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.show-image{
+  width: 500px;
+}
+
+.show-details p{
+  border-bottom: solid 1px black;
+}
+
 /* ######################599px以下###################### */
 @media(max-width:599px){
 /* ナビゲーション */
@@ -427,7 +443,15 @@ table{
 .form-box{
   width: 90%;
 }
-
+/* 販売車両一覧 */
+.show-image{
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.show-details p{
+  font-size: 12px;
+}
 }
 
 /* ##########################767px以下################## */
