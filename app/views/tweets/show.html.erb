@@ -10,7 +10,7 @@
     <p class = "show_mileage">走行距離　<%=@tweet.mileage%></p>
     <p class = "show_inspection">車検　　　<%=@tweet.inspection%></p>
   </div>
-  <div><%= link_to new_contact_path do %>→メールで問合せる←<% end %></div>
+  <div><%= link_to "https://docs.google.com/forms/d/e/1FAIpQLSdNddLtiQoMWexzibUqjX0cB1km-A7lkjd-q4Wwx4Lrl31ewQ/viewform?usp=sf_link" do %>→フォームで問合せ←<% end %></div>
   <div>電話:090-1234-5678</div>
   <%if user_signed_in? && current_user.admin %>
     <div class="">
